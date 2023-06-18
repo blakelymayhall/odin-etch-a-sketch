@@ -1,0 +1,53 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 0;
+    color: lightgreen;
+
+}
+p {
+    text-align: center;
+    font-size: 18px;
+    color: lightgreen;
+}
+
+button {
+    font-size: 18px;
+}
+
+.headerRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    margin: 0;
+}
+
+.gridContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridBackground {
+    width: 600px;
+    height: 600px;
+    background-color: lightgray;
+}
+
+.gridRow {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 75px; /* 600 / 16 */
+}
+
+.square {
+    aspect-ratio: 1;
+    height: 80%;
+    background-color: white;
+}
