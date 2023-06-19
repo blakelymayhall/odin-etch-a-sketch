@@ -52,6 +52,7 @@ function drawGrid() {
     for(let ii = 0; ii < gridSize; ii++) {
         const square = document.createElement("div");
         square.classList.add("square");
+        square.style.cssText = "filter: contrast(100%);"
         gridRow.appendChild(square);
     }
 
@@ -102,13 +103,15 @@ function addGridListeners() {
     // confirm mouse is down before changing color
     const squares = document.querySelectorAll('.square');
     squares.forEach((square) => {
+        let rndColor = Math.floor(Math.random() * 359);
+
         square.addEventListener("mousedown", () => {
-            square.style.cssText = "background-color: black";
+            square.style.cssText = "background-color: hsl(" + rndColor + ",100%, 50%);";
         });
 
         square.addEventListener('mouseenter', () => {
             if(isMouseDown) {
-                square.style.cssText = "background-color: black";
+                square.style.cssText = "background-color: hsl(" + rndColor + ",100%, 50%);";
             }
         });
     });
